@@ -1,0 +1,40 @@
+{
+  "name": "k9cupid",
+  "version": "1.0.0",
+  "description": "a doggie dating app made simple",
+  "main": "start",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brooke-delgado/K9Cupid.git"
+  },
+  "keywords": [
+    "k9cupid"
+  ],
+  "author": "Brooke, Matt, Denis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brooke-delgado/K9Cupid/issues"
+  },
+  "homepage": "https://github.com/brooke-delgado/K9Cupid#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.2",
+    "sequelize": "^6.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1"
+  }
+}
