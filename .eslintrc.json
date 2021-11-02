@@ -18,6 +18,9 @@
     "curly": "error",
     "dot-notation": "error",
     "eqeqeq": "error",
-    "no-empty-function": "error"
+    "no-empty-function": "error",
+    "quotes": [2, "double"],
+    "semi": 0,
+    "comma-dangle": ["error", "never"]
   }
 }
