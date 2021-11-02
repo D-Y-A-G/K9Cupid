@@ -21,6 +21,6 @@
     "no-empty-function": "error",
     "quotes": [2, "double"],
     "semi": 0,
-    "comma-dangle": ["error", "never"]
+    "comma": ["allow"]
   }
 }
