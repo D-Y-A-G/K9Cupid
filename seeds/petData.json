@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "pet_name": "Sal",
+    "breed": "sal@hotmail.com",
+    "age": "5",
+    "size": "password12345",
+    "gender": "male",
+    "location": "San Antonio"
+  },
+  {
+    "id": 2,
+    "pet_name": "Sal",
+    "breed": "sal@hotmail.com",
+    "age": "5",
+    "size": "password12345",
+    "gender": "male",
+    "location": "San Antonio"
+  },
+  {
+    "id": 3,
+    "pet_name": "Sal",
+    "breed": "sal@hotmail.com",
+    "age": "5",
+    "size": "password12345",
+    "gender": "male",
+    "location": "San Antonio"
+  }
+]
