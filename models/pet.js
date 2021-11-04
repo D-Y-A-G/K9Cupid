@@ -36,12 +36,20 @@ Pet.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    location: {
-      type: DataTypes.STRING,
+    // location: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   references: {
+    //       model: "user",
+    //       key: "location"
+    //   }
+    // }
+    owner_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-          model: "user",
-          key: "location"
+        model: "user",
+        key: "id"
       }
     }
   },
