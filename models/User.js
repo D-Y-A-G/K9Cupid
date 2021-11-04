@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
 class User extends Model {
-  checkPassword (loginPw) {
+  checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
@@ -34,11 +34,11 @@ User.init(
       validate: {
         len: [8]
       }
-    },
-    location: {
-      type: DataTypes.STRING,
-      allowNull: false
     }
+    // location: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false
+    // }
   },
   {
     hooks: {
