@@ -32,8 +32,6 @@ router.get("/register", async (req, res) => {
   res.render("register");
 });
 
-module.exports = router;
-
 router.get("/login", async (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/");
