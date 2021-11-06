@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { User } = require("../../models");
 
 router.post("/", async (req, res) => {
+  
   try {
     // const newUserData = req.body;
     // console.log(req.body);
@@ -18,7 +19,7 @@ router.post("/", async (req, res) => {
 
       res.status(200).json(newUser);
     });
-    console.log(req.body);
+
     console.log(newUserData);
   } catch (err) {
     res.status(400).json(err);
