@@ -22,12 +22,12 @@ const { User, Pet } = require("../models");
 // });
 
 router.get("/", async (req, res) =>
-  res.render("homepage", { text: "We 💗 dogs!!!" })
+  res.render("homepage", { logged_in: req.session.logged_in })
 );
 
 router.get("/register", async (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/profile");
+    res.redirect("/profile"); //profile
     return;
   }
 
@@ -36,7 +36,7 @@ router.get("/register", async (req, res) => {
 
 router.get("/login", async (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/");
+    res.redirect("/profile"); //profile
     return;
   }
 
@@ -44,12 +44,14 @@ router.get("/login", async (req, res) => {
 });
 
 router.get("/profile", async (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect("/register");
+  if (!req.session.logged_in) {
+    res.redirect("/");
     return;
   }
 
   res.render("profile");
 });
+
+
 
 module.exports = router;
