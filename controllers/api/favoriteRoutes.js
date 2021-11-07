@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { User, Pet, Favorite } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-router.post("/", async (req, res) => {
+router.post("/:id", async (req, res) => {
   try {
     const newFavorite = await Favorite.create({
       favorite_pet_id: req.body.pet.id //TODO:fix this later
