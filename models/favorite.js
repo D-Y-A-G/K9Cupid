@@ -1,14 +1,13 @@
 const { Model, DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
-class Pet extends Model {
+class Favorite extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
-Pet.init(
+Favorite.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -16,31 +15,11 @@ Pet.init(
       primaryKey: true,
       autoIncrement: true
     },
-    pet_name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    age: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    breed: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    gender: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    size: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    owner_id: {
+    favorite_pet_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "user",
+        model: "pet",
         key: "id"
       }
     }
@@ -54,4 +33,4 @@ Pet.init(
   }
 );
 
-module.exports = Pet;
+module.exports = Favorite;
