@@ -1,4 +1,10 @@
+
 <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+  {{#if edit}}
+  <div>
+    {{!-- editable data --}}
+  </div>
+  {{else}}
   <div class="card p-4">
     <div
       class="image d-flex flex-column justify-content-center align-items-center"
@@ -41,6 +47,6 @@
     </div>
   </div>
 </div>
-
+{{/if}}
 <button class="btn btn-secondary" id="logout">logout</button><br />
-<script src="/js/logout.js"></script>
+<script src="/js/logout.js"></script>y7yc
