@@ -35,9 +35,10 @@ User.init(
         len: [8]
       }
     }
-    // location: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false
+
+    // image: {
+    //   type: DataTypes.MEDIUMBLOB,
+    //   allowNull: true
     // }
   },
   {
