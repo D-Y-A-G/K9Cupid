@@ -1,0 +1,12 @@
+ <section class="container"></section>
+  {{#if loggedIn}}
+  <section class="flex-row justify-center">
+    {{#each pet as |pet|}}
+    {{> pet-details}}
+    {{/each}}
+  </section>
+</section>
+<!--link to login -->
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}

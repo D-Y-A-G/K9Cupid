@@ -53,4 +53,17 @@ router.delete("/:id", withAuth, async (req, res) => {
   }
 });
 
+router.get("/", (req, res) => {
+  // find all pets
+
+  Pet.findAll({
+    where: {
+      age: req.body.age,
+      breed: req.body.breed,
+      gender: req.body.gender,
+      size: req.body.size
+    }
+  }).then((pet) => res.json(pet));
+});
+
 module.exports = router;

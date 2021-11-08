@@ -15,9 +15,6 @@
   <body>
     <h1>💘K9Cupid💘</h1>
     <p>WELCOME TO OUR THE BEST DOG DATING APP!</p>
-
-    {{! form for favorite pet connection }}
-
     <form class="">
       <div class="from-group">
         <label for="pet-name">Name:</label>
@@ -25,7 +22,18 @@
       </div>
       <div class="from-group">
         <label for="pet-age">Age:</label>
-        <input type="integer" class="form-input" id="pet-age" />
+        <select type="integer" class="form-input" id="pet-age">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
       </div>
       <div>
         <label for="pet-breed">Breed:</label>
@@ -33,17 +41,23 @@
       </div>
       <div>
         <label for="pet-gender">Gender:</label>
-        <input type="text" class="form-input" id="pet-gender" />
+        <select type="text" class="form-input" id="pet-gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
       </div>
       <div>
         <label for="pet-size">Size:</label>
-        <input type="text" class="form-input" id="pet-size" />
+        <select type="text" class="form-input" id="pet-size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
       </div>
       <button class="btn btn-success" type="submit" id="add-pet">Add Pet</button>
+      <button class="btn btn-success" type="submit" id="find-pet">Find Pet</button>
     </form>
     <button id="add-form">Create Pet Profile</button>
-
-    {{! form for favorite pet connection }}
 
     {{{body}}}
 
