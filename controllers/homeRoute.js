@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
 
     res.render("homepage", {
       users,
-      logged_in: req.session.logged_in,
+      logged_in: req.session.logged_in
       // text: "We 💗 dogs!!!"
     });
   } catch (err) {
@@ -50,6 +50,28 @@ router.get("/profile", async (req, res) => {
   }
 
   res.render("profile");
+});
+
+router.get("/results", async (req, res) => {
+  try {
+    const profileData = await Pet.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["name"]
+        }
+      ]
+    });
+
+    const profile = profileData.get({ plain: true });
+
+    res.render("results", {
+      ...profile,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
