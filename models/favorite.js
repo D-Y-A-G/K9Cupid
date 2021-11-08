@@ -22,6 +22,14 @@ Favorite.init(
         model: "pet",
         key: "id"
       }
+    },
+    owner_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "user",
+        key: "id"
+      }
     }
   },
   {
