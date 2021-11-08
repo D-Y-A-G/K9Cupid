@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = newUser.id;
-      req.session.logged_in = true; 
+      req.session.logged_in = true;
 
       res.status(200).json(newUser);
     });
@@ -44,7 +44,7 @@ router.post("/login", async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
-      console.log(userData.id + "its me");
+      // console.log(userData.id + " its me ");
       sessionStorage.setItem("userId", userData.id);
       req.session.logged_in = true;
 
@@ -64,4 +64,5 @@ router.post("/logout", (req, res) => {
     res.status(404).end();
   }
 });
+
 module.exports = router;
