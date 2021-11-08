@@ -5,7 +5,8 @@ const withAuth = require("../../utils/auth");
 router.post("/:id", async (req, res) => {
   try {
     const newFavorite = await Favorite.create({
-      favorite_pet_id: req.body.pet.id //TODO:fix this later
+      favorite_pet_id: req.body.pet.id,
+      owner_id: req.session.user_id //TODO:fix this later
     });
     res.status(200).json(newFavorite);
   } catch (err) {
@@ -28,6 +29,16 @@ router.delete("/:id", withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get("/", (req, res) => {
+  // find all favorited pets
+
+  Favorite.findAll({
+    where: {
+      owner_id: req.session.user_id
+    }
+  }).then((favorite) => res.json(favorite));
 });
 
 module.exports = router;
