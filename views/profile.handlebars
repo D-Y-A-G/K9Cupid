@@ -1,18 +1,45 @@
 {{!  }}
-{{#each pets as |pet|}}
-  <div class="text-center">
-    <h3>Profile</h3>
+{{!-- {{#each pets as |pet|}}
+  <div class="text-center" style="font-family: 'Archivo Black', sans-serif">
+    <h5>Profile</h5>
     <h2>{{pet.pet_name}}</h2>
     <p>{{pet.age}}</p>
     <p>{{pet.breed}}</p>
     <p>{{pet.gender}}</p>
     <p>{{pet.size}}</p>
   </div>
+{{/each}} --}}
+
+{{#each pets as |pet|}}
+  <div class="card" style="width: 18rem; position:relative; float:left;">
+    <img src="..." class="card-img-top" alt="..." />
+    <div class="card-body" style="text-align: center; align-items:center">
+      <h2 class="card-title">{{pet.pet_name}}</h2>
+      <p class="card-text">Some quick example text to build on the card title
+        and make up the bulk of the card's content.</p>
+    </div>
+    <ul
+      class="list-group list-group-flush"
+      style="text-align: center; align-items:center"
+    >
+      <li class="list-group-item">Age {{pet.age}}</li>
+      <li class="list-group-item">{{pet.breed}}</li>
+      <li class="list-group-item">{{pet.gender}}</li>
+      <li class="list-group-item">Doggie Size
+        <span style="color: steelblue;">{{pet.size}}</span></li>
+    </ul>
+    {{! <div class="card-body">
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div> }}
+  </div>
 {{/each}}
 
-<a href="/pets" type="btn-success" id="lnk-add-pet">Click here to add a Pet</a>
 <br />
-<button class="btn btn-warning" type="submit" id="del-pet">Delete Pet</button>
+<div style="position:relative; left: 40%;">
+  <button class="btn btn-warning" type="submit" id="del-pet">Delete Pet</button>
+  <a href="/pets" type="btn-success" id="lnk-add-pet">Click here to add a Pet</a>
+</div>
 {{! <div class="card p-4">
     <div
       class="image d-flex flex-column justify-content-center align-items-center"
@@ -55,7 +82,5 @@
     </div>
   </div>
 </div> }}
-
-<button class="btn btn-secondary" id="logout">logout</button><br />
 <script src="/js/logout.js"></script>
 <script src="/js/addPet.js"></script>

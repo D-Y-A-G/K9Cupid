@@ -1,32 +1,81 @@
-<!-- Dog Thumb-->
+{{! homepage }}
 
 {{#if logged_in}}
-  <a href="/profile">Profile</a>
-  <button class="btn btn-primary" id="logout">logout</button>
-  <script src="/js/logout.js"></script>
-{{else}}
 
-  <div class="dog_thumb">
-    <img
-      width="50%"
-      height="50%"
-      src="https://th.bing.com/th/id/R.6c101d1e27bdad589f2224c771312bfa?rik=isoNyTjWLe3GCA&riu=http%3a%2f%2fweneedfun.com%2fwp-content%2fuploads%2f2015%2f10%2fCute-puppy-Pictures-29.jpg&ehk=c4Pri2hAYt5j%2b1ZUn%2bq04AcxiTD1gA6Nve6HmotswRE%3d&risl=&pid=ImgRaw&r=0"
-      alt="picture of young labrador"
-    />
-    <!-- Social Info-->
-    <h4>Please <a href="/login">Register or Login </a> to view account</h4>
-
-    <div class="social-info">
-      <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
-          class="fa fa-twitter"
-        ></i></a><a href="#"><i class="fa fa-linkedin"></i></a>
+  {{! <button class="btn btn-primary" id="logout">logout</button>
+  <script src="/js/logout.js"></script> }}
+  <h3
+    style="color:royalblue; font-family: 'Archivo Black', sans-serif; text-align:center; align-items:center; margin-top: 50px;"
+  >Our most popular profiles</h3>
+  <div style="margin-right: 580px; margin-top: 70px;">
+    <div
+      class="center card"
+      id="dog-card"
+      style="width: 18rem; position:relative; top: 10px; left: 40%; float:left; margin-right: 25px;"
+    >
+      <img
+        src="https://th.bing.com/th/id/R.6c101d1e27bdad589f2224c771312bfa?rik=isoNyTjWLe3GCA&riu=http%3a%2f%2fweneedfun.com%2fwp-content%2fuploads%2f2015%2f10%2fCute-puppy-Pictures-29.jpg&ehk=c4Pri2hAYt5j%2b1ZUn%2bq04AcxiTD1gA6Nve6HmotswRE%3d&risl=&pid=ImgRaw&r=0"
+        class="card-img-top"
+        alt="..."
+      />
+      <div
+        class="card-body"
+        style="font-family: 'Archivo Black', sans-serif; text-align:center; align-items:center;"
+      >
+        <h2 class="card-title">Binky</h2>
+        <p class="card-text" style="font-size: 1rem; color:gray">Loves to play
+          fetch and swimming</p>
+        <a href="/login" class="btn btn-primary">Go to profile</a>
+      </div>
     </div>
+
+    <div
+      class="center card"
+      id="dog-card"
+      style="width: 18rem; position:relative; top: 10px; left: 40%; float:left; margin-right: 25px;"
+    >
+      <img
+        src="https://www.loveyourdog.com/wp-content/uploads/2020/05/Dalmatian-Dog.jpg"
+        class="card-img-top"
+        alt="blue eyes dog"
+      />
+      <div
+        class="card-body"
+        style="font-family: 'Archivo Black', sans-serif; text-align:center; align-items:center"
+      >
+        <h2 class="card-title">Blue</h2>
+        <p class="card-text" style="font-size: 1rem; color:gray">Loves to go
+          hiking and dig for treasures</p>
+        <a href="/login" class="btn btn-primary">Go to profile</a>
+      </div>
+    </div>
+
+    <div
+      class="center card"
+      id="dog-card"
+      style="width: 18rem; position:relative; top: 10px; left: 40%; float:left; margin-right: 25px;"
+    >
+      <img
+        src="https://hellobark.com/wp-content/uploads/rottweiler-image.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div
+        class="card-body"
+        style="font-family: 'Archivo Black', sans-serif; text-align:center; align-items:center"
+      >
+        <h2 class="card-title">Rocky</h2>
+        <p class="card-text" style="font-size: 1rem; color:gray">Enjoys sleeping
+          and playing tag with other dogs</p>
+        <a href="/login" class="btn btn-primary">Go to profile</a>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Furry Friend Details-->
-  <div class="single_advisor_details_info">
-    <h3>Binky</h3>
-    <p class="hobby">Loves Swimming!</p>
-  </div>
+  {{! <a href="/profile">Profile</a> }}
+{{else}}
+  <div class="">
 
+  </div>
 {{/if}}

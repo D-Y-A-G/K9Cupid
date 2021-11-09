@@ -11,10 +11,80 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <h1>💘K9Cupid💘</h1>
-    <p>WELCOME TO OUR THE BEST DOG DATING APP!</p>
+  <body style="background-color:white;">
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="color:rgb(247, 81, 81); background-color:#e3f2fd; font-family: 'Archivo Black', sans-serif;"
+    >
+      <div
+        class="container-fluid"
+        style="font-family: 'Archivo Black', sans-serif"
+      >
+        {{#if logged_in}}
+          <a
+            class="navbar-brand"
+            href="/profile"
+            style="color:royalblue;"
+          >Profile</a>
+        {{else}}
+          <a class="nav-link active" href="/login">Please register or login to
+            view account!</a>
+        {{/if}}
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/"
+                style="color: rgb(102, 99, 99);"
+              >Homepage</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="/favorites"
+                style="color: rgb(102, 99, 99);"
+              >Favorite Furriends</a>
+            </li>
+            {{#if logged_in}}
+              <li class="nav-item">
+                <a class="btn" id="logout">Logout</a>
+              </li>
+            {{else}}
+              <li class="nav-item">
+                <a class="nav-link active" href="/login">Login</a>
+              </li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <h1
+      style="font-family: 'Archivo Black', sans-serif; color:tomato; text-align: center; align-items: center"
+    >💘K9Cupid💘</h1>
+    <p
+      style="font-family: 'Archivo Black', sans-serif; color:slategray; text-align: center; align-items: center"
+    >WELCOME TO OUR THE BEST DOG DATING APP!</p>
 
     {{{body}}}
 
@@ -33,6 +103,7 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/logout.js"></script>
 
   </body>
 </html>
