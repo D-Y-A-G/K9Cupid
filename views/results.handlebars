@@ -1,16 +1,19 @@
-<h1>BEST MATCHING PETS</h1>
-<div class="text-center">
-    <h2>{{name}}</h2>
-    <p>{{age}}</p>
-    <p>{{Breed}}</p>
-    <p>{{gender}}</p>
-    <p>{{size}}</p>
-</div>
+
+{{#each pet as |pet|}}
+  <div class="text-center">
+    <h3>Profile</h3>
+    <h2>{{pet.pet_name}}</h2>
+    <p>{{pet.age}}</p>
+    <p>{{body.breed}}</p>
+    <p>{{body.gender}}</p>
+    <p>{{body.size}}</p>
+  </div>
+{{/each}}
 
 <a href="/homepage">Go to homepage</a>
- 
- <section class="container"></section>
-  {{#if loggedIn}}
+
+{{!-- <section class="container"></section>
+  {{#if logged_in}}
   <section class="flex-row justify-center">
     {{#each pet as |pet|}}
     {{> pet-details}}
@@ -21,3 +24,4 @@
 {{else}}
 <a href="/login">You must login first to view this page</a>
 {{/if}}
+<script src="/js/addPet.js"></script> --}}

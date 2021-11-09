@@ -25,6 +25,15 @@ router.get("/", async (req, res) =>
   res.render("homepage", { logged_in: req.session.logged_in })
 );
 
+router.get("/pets", async (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect("/"); //profile
+    return;
+  }
+
+  res.render("pets");
+});
+
 router.get("/register", async (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/profile"); //profile
@@ -43,13 +52,24 @@ router.get("/login", async (req, res) => {
   res.render("login");
 });
 
-router.get("/profile", async (req, res) => {
-  if (!req.session.logged_in) {
-    res.redirect("/");
-    return;
-  }
 
-  res.render("profile");
+router.get("/profile", async (req, res) => {
+  try {
+    const profileData = await Pet.findAll({
+      where: {
+        owner_id: req.session.user_id
+      }
+    });
+
+    const profile = profileData.map(item => item.get({ plain: true }));
+
+    res.render("profile", {
+      pets:profile,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get("/results", async (req, res) => {

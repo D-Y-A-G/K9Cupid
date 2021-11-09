@@ -102,12 +102,10 @@ const delPet = async (event) => {
   }
 };
 
-document
-  .querySelector("#add-pet")
-  .addEventListener("submit", addPetFormHandler);
+document.querySelector("#add-pet").addEventListener("click", addPetFormHandler);
 document
   .querySelector("#find-pet")
-  .addEventListener("submit", findPetFormHandler);
+  .addEventListener("click", findPetFormHandler);
 document.querySelector("#addFavorite").addEventListener("click", addFavorite);
 document.querySelector("#delFavorite").addEventListener("click", delFavorite);
 document.querySelector("#del-pet").addEventListener("click", delPet);

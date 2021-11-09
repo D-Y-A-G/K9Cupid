@@ -1,11 +1,19 @@
-
-<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
-  {{#if edit}}
-  <div>
-    {{!-- editable data --}}
+{{!  }}
+{{#each pets as |pet|}}
+  <div class="text-center">
+    <h3>Profile</h3>
+    <h2>{{pet.pet_name}}</h2>
+    <p>{{pet.age}}</p>
+    <p>{{body.breed}}</p>
+    <p>{{body.gender}}</p>
+    <p>{{body.size}}</p>
   </div>
-  {{else}}
-  <div class="card p-4">
+{{/each}}
+
+<a href="/pets" type="btn-success" id="lnk-add-pet">Click here to add a Pet</a>
+<br />
+<button class="btn btn-warning" type="submit" id="del-pet">Delete Pet</button>
+{{! <div class="card p-4">
     <div
       class="image d-flex flex-column justify-content-center align-items-center"
     >
@@ -26,7 +34,7 @@
       <div
         class="d-flex flex-row justify-content-center align-items-center mt-3"
       >
-        <span class="number">5 <span class="follow">Matches</span></span> {{!-- add matches and favorite link --}}
+        <span class="number">5 <span class="follow">Matches</span></span> 
       </div>
       <div class="d-flex mt-2">
         <button class="btn1 btn-success" type="submit">Edit Profile</button>
@@ -46,8 +54,8 @@
       </div>
     </div>
   </div>
-</div>
-{{/if}}
+</div> }}
+
 <button class="btn btn-secondary" id="logout">logout</button><br />
 <script src="/js/logout.js"></script>
 <script src="/js/addPet.js"></script>
