@@ -52,7 +52,6 @@ router.get("/login", async (req, res) => {
   res.render("login");
 });
 
-
 router.get("/profile", async (req, res) => {
   try {
     const profileData = await Pet.findAll({
@@ -61,10 +60,10 @@ router.get("/profile", async (req, res) => {
       }
     });
 
-    const profile = profileData.map(item => item.get({ plain: true }));
+    const profile = profileData.map((item) => item.get({ plain: true }));
 
     res.render("profile", {
-      pets:profile,
+      pets: profile,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -74,19 +73,19 @@ router.get("/profile", async (req, res) => {
 
 router.get("/results", async (req, res) => {
   try {
-    const profileData = await Pet.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ["name"]
-        }
-      ]
+    const resultsData = await Pet.findAll({
+      where: {
+        age: req.body.age,
+        breed: req.body.breed,
+        gender: req.body.gender,
+        size: req.body.size
+      }
     });
 
-    const profile = profileData.get({ plain: true });
+    const results = resultsData.map((item) => item.get({ plain: true }));
 
     res.render("results", {
-      ...profile,
+      pets: results,
       logged_in: req.session.logged_in
     });
   } catch (err) {
