@@ -59,10 +59,10 @@ const findPetFormHandler = async (event) => {
 const addFavorite = async (event) => {
   event.preventDefault();
 
-  if (favorite_pet_id) {
+  if (owner_id) {
     const response = await fetch("/api/favorites", {
       method: "POST",
-      body: JSON.stringify({ favorite_pet_id: req.session.user_id }),
+      body: JSON.stringify({ owner_id: req.session.user_id }),
       headers: { "Content-Type": "application/json" }
     });
 
@@ -102,12 +102,10 @@ const delPet = async (event) => {
   }
 };
 
-document
-  .querySelector("#add-pet")
-  .addEventListener("submit", addPetFormHandler);
+document.querySelector("#add-pet").addEventListener("click", addPetFormHandler);
 document
   .querySelector("#find-pet")
-  .addEventListener("submit", findPetFormHandler);
-document.querySelector("#addFavorite").addEventListener("click", addFavorite);
-document.querySelector("#delFavorite").addEventListener("click", delFavorite);
+  .addEventListener("click", findPetFormHandler);
+document.querySelector("#add-favorite").addEventListener("click", addFavorite);
+document.querySelector("#del-favorite").addEventListener("click", delFavorite);
 document.querySelector("#del-pet").addEventListener("click", delPet);
