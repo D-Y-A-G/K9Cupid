@@ -1,12 +1,14 @@
 {{! pet results  }}
-{{#each pet as |pet|}}
+{{#each pets as |pet|}}
   <div class="text-center">
     <h3>Profile</h3>
+    <img src="{{pet.image}}" />
     <h2>{{pet.pet_name}}</h2>
     <p>{{pet.age}}</p>
     <p>{{pet.breed}}</p>
     <p>{{pet.gender}}</p>
     <p>{{pet.size}}</p>
+
   </div>
 {{/each}}
 

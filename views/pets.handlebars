@@ -1,5 +1,10 @@
-<form class="pet-form">
+<form
+  style="font-family: 'Archivo Black', sans-serif; box-shadow: 10px 10px gray; width: 25%; height: 50%; opacity: 95%; padding:30px; background-color:rgb(104, 175, 247); color:aliceblue; margin-left:37%; margin-top: 50px; border-radius: 20px; text-shadow: 2px 2px black; line-height:2.5rem;"
+  class="center-card pet-form"
+>
   <div class="from-group">
+    <label for="pet-image">Please add img link:</label>
+    <input type="url" class="form-input" id="pet-image" />
     <label for="pet-name">Name:</label>
     <input type="text" class="form-input" id="pet-name" />
   </div>
@@ -32,9 +37,9 @@
   <div>
     <label for="pet-size">Size:</label>
     <select type="text" class="form-input" id="pet-size">
-      <option value="small">Small</option>
-      <option value="medium">Medium</option>
-      <option value="large">Large</option>
+      <option value="Small">Small</option>
+      <option value="Medium">Medium</option>
+      <option value="Large">Large</option>
     </select>
   </div>
   <button class="btn btn-success" type="submit" id="add-pet">Add Pet</button>

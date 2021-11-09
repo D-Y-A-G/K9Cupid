@@ -36,6 +36,10 @@ Pet.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     owner_id: {
       type: DataTypes.INTEGER,
       allowNull: false,

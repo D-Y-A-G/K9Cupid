@@ -10,6 +10,7 @@ router.post("/", async (req, res) => {
       breed: req.body.breed,
       gender: req.body.gender,
       size: req.body.size,
+      image: req.body.image,
       owner_id: req.session.user_id
     });
     res.status(200).json(newPet);

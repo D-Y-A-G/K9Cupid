@@ -1,11 +1,25 @@
-<h1>BEST MATCHING PETS</h1>
+<h1 style="text-align: center; align-items:center;">BEST MATCHING PETS</h1>
 
-<div class="text-center">
-  <h3>Profile</h3>
-  <h2>{{pet.pet_name}}</h2>
-  <p>{{pet.age}}</p>
-  <p>{{pet.breed}}</p>
-  <p>{{pet.gender}}</p>
-  <p>{{pet.size}}</p>
-</div>
+{{#each pets as |pet|}}
+  <div class="card" style="width: 18rem; position:relative; float:left;">
+    <img src="{{pet.image}}" class="card-img-top" alt="..." />
+    <div class="card-body" style="text-align: center; align-items:center">
+      <h2 class="card-title">{{pet.pet_name}}</h2>
+      <p class="card-text">Some quick example text to build on the card title
+        and make up the bulk of the card's content.</p>
+    </div>
+    <ul
+      class="list-group list-group-flush"
+      style="text-align: center; align-items:center"
+    >
+      <li class="list-group-item">Age {{pet.age}}</li>
+      <li class="list-group-item">{{pet.breed}}</li>
+      <li class="list-group-item">{{pet.gender}}</li>
+    </ul>
+    {{! <div class="card-body">
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div> }}
+  </div>
+{{/each}}
 <button id="add-favorite">Add to favorite pets</button>
