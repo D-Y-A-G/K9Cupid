@@ -36,23 +36,21 @@ const findPetFormHandler = async (event) => {
   const petSize = document.querySelector("#pet-size").value.trim();
 
   if (petName && petAge && petBreed && petGender && petSize) {
-    const response = await fetch("/api/pets", {
-      method: "GET",
-      body: JSON.stringify({
-        pet_name: petName,
-        age: petAge,
-        breed: petBreed,
-        gender: petGender,
-        size: petSize
-      }),
-      headers: { "Content-Type": "application/json" }
-    });
+    // const response = await fetch(
+    //   `/api/pets/${petAge}/${petBreed}/${petGender}/${petSize}`,
+    // {
+    //   method: "GET",
+    //   headers: { "Content-Type": "application/json" }
+    // }
+    // );
 
-    if (response.ok) {
-      document.location.replace("/profile");
-    } else {
-      alert(response.statusText);
-    }
+    // if (response.ok) {
+    document.location.replace(
+      `/results/${petAge}/${petBreed}/${petGender}/${petSize}`
+    );
+    // } else {
+    //   alert(response.statusText);
+    // }
   }
 };
 

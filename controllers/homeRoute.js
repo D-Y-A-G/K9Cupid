@@ -71,14 +71,14 @@ router.get("/profile", async (req, res) => {
   }
 });
 
-router.get("/results", async (req, res) => {
+router.get("/results/:age/:breed/:gender/:size", async (req, res) => {
   try {
     const resultsData = await Pet.findAll({
       where: {
-        age: req.body.age,
-        breed: req.body.breed,
-        gender: req.body.gender,
-        size: req.body.size
+        age: req.params.age,
+        breed: req.params.breed,
+        gender: req.params.gender,
+        size: req.params.size
       }
     });
 
