@@ -5,6 +5,7 @@ const addPetFormHandler = async (event) => {
   const petBreed = document.querySelector("#pet-breed").value.trim();
   const petGender = document.querySelector("#pet-gender").value.trim();
   const petSize = document.querySelector("#pet-size").value.trim();
+  const petImage = document.querySelector("#pet-image").value.trim();
 
   if (petName && petAge && petBreed && petGender && petSize) {
     const response = await fetch("/api/pets", {
@@ -14,13 +15,14 @@ const addPetFormHandler = async (event) => {
         age: petAge,
         breed: petBreed,
         gender: petGender,
-        size: petSize
+        size: petSize,
+        image: petImage
       }),
       headers: { "Content-Type": "application/json" }
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/profile");
     } else {
       alert(response.statusText);
     }
@@ -35,7 +37,7 @@ const findPetFormHandler = async (event) => {
   const petGender = document.querySelector("#pet-gender").value.trim();
   const petSize = document.querySelector("#pet-size").value.trim();
 
-  if (petName && petAge && petBreed && petGender && petSize) {
+  if (petAge && petBreed && petGender && petSize) {
     // const response = await fetch(
     //   `/api/pets/${petAge}/${petBreed}/${petGender}/${petSize}`,
     // {

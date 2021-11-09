@@ -1,18 +1,8 @@
-{{!  }}
-{{!-- {{#each pets as |pet|}}
-  <div class="text-center" style="font-family: 'Archivo Black', sans-serif">
-    <h5>Profile</h5>
-    <h2>{{pet.pet_name}}</h2>
-    <p>{{pet.age}}</p>
-    <p>{{pet.breed}}</p>
-    <p>{{pet.gender}}</p>
-    <p>{{pet.size}}</p>
-  </div>
-{{/each}} --}}
+{{! profile }}
 
 {{#each pets as |pet|}}
   <div class="card" style="width: 18rem; position:relative; float:left;">
-    <img src="..." class="card-img-top" alt="..." />
+    <img src="{{pet.image}}" class="card-img-top" alt="dog picture" />
     <div class="card-body" style="text-align: center; align-items:center">
       <h2 class="card-title">{{pet.pet_name}}</h2>
       <p class="card-text">Some quick example text to build on the card title
@@ -36,7 +26,7 @@
 {{/each}}
 
 <br />
-<div style="position:relative; left: 40%;">
+<div>
   <button class="btn btn-warning" type="submit" id="del-pet">Delete Pet</button>
   <a href="/pets" type="btn-success" id="lnk-add-pet">Click here to add a Pet</a>
 </div>
