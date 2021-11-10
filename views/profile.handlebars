@@ -5,8 +5,8 @@
     <img src="{{pet.image}}" class="card-img-top" alt="dog picture" />
     <div class="card-body" style="text-align: center; align-items:center">
       <h2 class="card-title">{{pet.pet_name}}</h2>
-      <p class="card-text">Some quick example text to build on the card title
-        and make up the bulk of the card's content.</p>
+      {{! <p class="card-text">Some quick example text to build on the card title
+        and make up the bulk of the card's content.</p> }}
     </div>
     <ul
       class="list-group list-group-flush"
@@ -18,16 +18,18 @@
       <li class="list-group-item">Doggie Size
         <span style="color: steelblue;">{{pet.size}}</span></li>
     </ul>
+    <button class="btn btn-warning" type="submit" id="del-pet">Delete Pet</button>
     {{! <div class="card-body">
       <a href="#" class="card-link">Card link</a>
       <a href="#" class="card-link">Another link</a>
     </div> }}
   </div>
+
 {{/each}}
 
 <br />
 <div>
-  <button class="btn btn-warning" type="submit" id="del-pet">Delete Pet</button>
+
   <a href="/pets" type="btn-success" id="lnk-add-pet">Click here to add a Pet</a>
 </div>
 {{! <div class="card p-4">
