@@ -1,21 +1,40 @@
-<h1>Welcome Back Furrriends!</h1>
-<h3>Please Login</h3>
-<form
-  class="login-form"
-  style="font-family: 'Archivo Black', sans-serif; box-shadow: 10px 10px gray; width: 30%; height: 25%; opacity: 95%; padding:30px; background-color:rgb(104, 175, 247); color:aliceblue; margin-left:37%; margin-top: 50px; border-radius: 20px; text-shadow: 2px 2px black; line-height:2.5rem;"
+{{! login page }}
+<div>
+  <h1
+    style="font-family: 'Archivo Black', sans-serif; margin-top:50px; position:relative; left: 32%; color:dodgerblue;"
+  >Welcome Back Furrriends!</h1>
+  <h3
+    style="font-family: 'Archivo Black', sans-serif; position:relative; left: 25%; padding-top:20px; color:grey"
+  >Please Login to access</h3>
+  <form
+    class="login-form"
+    style=" font-family: 'Archivo Black', sans-serif; box-shadow: 10px 10px gray; width: 30%; height: 25%; opacity: 95%; padding:30px; background-color:rgb(104, 175, 247); color:aliceblue; margin-left:37%; margin-top: 50px; border-radius: 20px; text-shadow: 2px 2px black; line-height:2.5rem;"
+  >
+    <div class="from-group">
+      <label for="email-login">Email:</label>
+      <input type="text" class="form-input" id="email-login" />
+    </div>
+    <div class="from-group">
+      <label for="password-login">Password:</label>
+      <input type="password" class="form-input" id="password-login" />
+    </div>
+    <button class="btn btn-success" type="submit">Login</button>
+  </form>
+</div>
+<br />
+{{!-- <img src="/assets/img/dog3.jpg" /> --}}
+{{! links bottom }}
+
+<div
+  class="containerLinks"
+  style="position: relative; left: 41%; font-family: 'Archivo Black', sans-serif;"
 >
-  <div class="from-group">
-    <label for="email-login">Email:</label>
-    <input type="text" class="form-input" id="email-login" />
-  </div>
-  <div class="from-group">
-    <label for="password-login">Password:</label>
-    <input type="password" class="form-input" id="password-login" />
-  </div>
-  <button class="btn" type="submit">Login</button>
-</form>
-
-<a class="returnRegister" href="/register">Go to Register</a><br />
-<a class="returnHome" href="/">Return to Homepage</a>
-
+  <a
+    class="returnRegister"
+    style="float: left; padding-right: 50px; color:tomato"
+    href="/register"
+  >Register here!</a>
+  <a class="returnHome" href="/" style="color: rgb(192, 107, 226) ;">Return to
+    Homepage</a>
+</div>
 <script src="/js/login.js"></script>

@@ -58,6 +58,7 @@ router.get("/", (req, res) => {
   // find all pets
 
   Pet.findAll({
+    // attributes: ["age", "breed", "gender", "size"]
     where: {
       age: req.body.age,
       breed: req.body.breed,

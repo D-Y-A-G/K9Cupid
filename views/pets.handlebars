@@ -1,15 +1,19 @@
+<p
+  style="font-family: 'Archivo Black', sans-serif; align-items:center; text-align:center; padding-top: 20px; font-size:1.5rem; color:tomato; margin-top: 20px;"
+>ADD A DOGGIE PROFILE
+</p>
 <form
-  style="font-family: 'Archivo Black', sans-serif; box-shadow: 10px 10px gray; width: 25%; height: 50%; opacity: 95%; padding:30px; background-color:rgb(104, 175, 247); color:aliceblue; margin-left:37%; margin-top: 50px; border-radius: 20px; text-shadow: 2px 2px black; line-height:2.5rem;"
+  style="font-family: 'Archivo Black', sans-serif; box-shadow: 10px 10px gray; width: 30%; height: 60%; opacity: 95%; padding:30px; background-color:rgb(104, 175, 247); color:aliceblue; margin-left:37%; margin-top: 50px; border-radius: 20px; text-shadow: 2px 2px black; line-height:2.5rem;"
   class="center-card pet-form"
 >
-  <div class="from-group">
-    <label for="pet-image">Please add img link:</label>
-    <input type="url" class="form-input" id="pet-image" />
-    <label for="pet-name">Name:</label>
+  <div class="from-group" style="padding: 10px;">
+    <label for="pet-image">Add img link :</label>
+    <input type="url" class="form-input" id="pet-image" /><br />
+    <label for="pet-name">Doggie Name:</label>
     <input type="text" class="form-input" id="pet-name" />
   </div>
   <div class="from-group">
-    <label for="pet-age">Age:</label>
+    <label for="pet-age">Doggie Age:</label>
     <select type="integer" class="form-input" id="pet-age">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -24,27 +28,84 @@
     </select>
   </div>
   <div>
-    <label for="pet-breed">Breed:</label>
+    <label for="pet-breed">Doggie Breed:</label>
     <input type="text" class="form-input" id="pet-breed" />
   </div>
   <div>
-    <label for="pet-gender">Gender:</label>
+    <label for="pet-gender">Doggie Gender:</label>
     <select type="text" class="form-input" id="pet-gender">
       <option value="Male">Male</option>
       <option value="Female">Female</option>
     </select>
   </div>
   <div>
-    <label for="pet-size">Size:</label>
+    <label for="pet-size">Doggie Size:</label>
     <select type="text" class="form-input" id="pet-size">
       <option value="Small">Small</option>
       <option value="Medium">Medium</option>
       <option value="Large">Large</option>
     </select>
   </div>
-  <button class="btn btn-success" type="submit" id="add-pet">Add Pet</button>
-  <button class="btn btn-success" type="submit" id="find-pet">Find Pet</button>
+  <button
+    class="btn btn-success"
+    type="submit"
+    id="add-pet"
+    style="position:relative; left:40%; bottom: -5%;"
+  >Add Doggie</button>
+  {{! <button class="btn btn-success" type="submit" id="find-pet">Find Doggie</button> }}
 </form>
 
+{{!  find doggie }}
+
+<p
+  style="font-family: 'Archivo Black', sans-serif; align-items:center; text-align:center; padding-top: 20px; font-size:1.5rem; color:goldenrod; margin-top: 25px;"
+>FIND A DOGGIE PROFILE
+</p>
+<form
+  style="font-family: 'Archivo Black', sans-serif; box-shadow: 10px 10px gray; width: 30%; height: 40%; opacity: 95%; padding:30px; background-color:rgb(104, 175, 247); color:aliceblue; margin-left:37%; margin-top: 50px; border-radius: 20px; text-shadow: 2px 2px black; line-height:2.5rem;"
+  class="center-card pet-form"
+>
+  <div class="from-group">
+    <label for="pet-age">Doggie Age:</label>
+    <select type="integer" class="form-input" id="pet-age">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+  </div>
+  <div>
+    <label for="pet-breed">Doggie Breed:</label>
+    <input type="text" class="form-input" id="pet-breed" />
+  </div>
+  <div>
+    <label for="pet-gender">Doggie Gender:</label>
+    <select type="text" class="form-input" id="pet-gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+  <div>
+    <label for="pet-size">Doggie Size:</label>
+    <select type="text" class="form-input" id="pet-size">
+      <option value="Small">Small</option>
+      <option value="Medium">Medium</option>
+      <option value="Large">Large</option>
+    </select>
+  </div>
+  {{! <button class="btn btn-success" type="submit" id="add-pet">Add Doggie</button> }}
+  <button
+    class="btn btn-success"
+    type="submit"
+    id="find-pet"
+    style="position:relative; left:40%; bottom: -5%;"
+  >Find Doggie</button>
+</form>
 
 <script src="/js/addPet.js"></script>

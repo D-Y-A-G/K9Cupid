@@ -18,10 +18,10 @@
       rel="stylesheet"
     />
   </head>
-  <body style="background-color:white;">
+  <body style="background-color: #e3f2fd;">
     <nav
       class="navbar navbar-expand-lg navbar-light"
-      style="color:rgb(247, 81, 81); background-color:#e3f2fd; font-family: 'Archivo Black', sans-serif;"
+      style="color:rgb(247, 81, 81); background-color:#e3f2fd; font-family: 'Archivo Black', sans-serif; padding-top: 30px; padding-bottom:0; font-size: 1.25rem;"
     >
       <div
         class="container-fluid"
@@ -55,36 +55,29 @@
                 class="nav-link active"
                 aria-current="page"
                 href="/"
-                style="color: rgb(102, 99, 99);"
+                style="color: rgb(192, 107, 226);"
               >Homepage</a>
             </li>
             <li class="nav-item">
               <a
                 class="nav-link active"
                 href="/favorites"
-                style="color: rgb(102, 99, 99);"
+                style="color: rgb(247, 162, 4);"
               >Favorites</a>
             </li>
             {{#if logged_in}}
               <li class="nav-item">
-                <a class="btn" id="logout">Logout</a>
+                <a class="btn" id="logout" style="font-size: 1.5rem;">Logout</a>
               </li>
             {{else}}
               <li class="nav-item">
-                <a class="nav-link active" href="/login">Login</a>
+                <a class="nav-link success" href="/login">Login</a>
               </li>
             {{/if}}
           </ul>
         </div>
       </div>
     </nav>
-
-    <h1
-      style="font-family: 'Archivo Black', sans-serif; color:tomato; text-align: center; align-items: center"
-    >💘K9Cupid💘</h1>
-    <p
-      style="font-family: 'Archivo Black', sans-serif; color:slategray; text-align: center; align-items: center"
-    >WELCOME TO OUR DOG DATING APP!</p>
 
     {{{body}}}
 

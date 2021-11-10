@@ -5,8 +5,8 @@
   {{! <button class="btn btn-primary" id="logout">logout</button>
   <script src="/js/logout.js"></script> }}
   <h3
-    style="color:royalblue; font-family: 'Archivo Black', sans-serif; text-align:center; align-items:center; margin-top: 50px;"
-  >Our most popular profiles</h3>
+    style="color:rgba(65, 105, 225, 0.836); font-family: 'Archivo Black', sans-serif; text-align:center; align-items:center; margin-top: 50px; text-shadow: 2px 2px white;"
+  >Our Most Popular Profiles!</h3>
   <div style="margin-right: 580px; margin-top: 70px;">
     <div
       class="center card"
@@ -25,11 +25,13 @@
         <h2 class="card-title">Binky</h2>
         <p class="card-text" style="font-size: 1rem; color:gray">Loves to play
           fetch and swimming</p>
-        <a href="/login" class="btn btn-primary">Go to profile</a>
+        <a href="/login" class="btn btn-primary">Build Yours!</a>
       </div>
     </div>
 
-    <div
+    {{! uncomment this out before presentation or find a new pic}}
+
+    {{! <div
       class="center card"
       id="dog-card"
       style="width: 18rem; position:relative; top: 10px; left: 40%; float:left; margin-right: 25px;"
@@ -48,7 +50,9 @@
           hiking and dig for treasures</p>
         <a href="/login" class="btn btn-primary">Go to profile</a>
       </div>
-    </div>
+    </div> }}
+
+    {{! uncomment this out before presentation or find a new pic}}
 
     <div
       class="center card"
@@ -67,7 +71,7 @@
         <h2 class="card-title">Rocky</h2>
         <p class="card-text" style="font-size: 1rem; color:gray">Enjoys sleeping
           and playing tag with other dogs</p>
-        <a href="/login" class="btn btn-primary">Go to profile</a>
+        <a href="/login" class="btn btn-primary">Build Yours!</a>
       </div>
     </div>
 
@@ -75,7 +79,26 @@
 
   {{! <a href="/profile">Profile</a> }}
 {{else}}
-  <div class="">
+<div class="homepage" style="background-color: #e3f2fd;"></div>
 
+    <h1
+      style="font-size: 4rem; font-family: 'Archivo Black', sans-serif; color:tomato; text-shadow: 2px 2px black; text-align: center; align-items: center; position:relative; top: 300px; z-index: 1"
+    >💘K9Cupid💘</h1>
+    <p
+      style="font-size: 2rem; font-family: 'Archivo Black', sans-serif; color:dodgerblue; text-shadow: 2px 2px white; text-align: center; align-items: center; position:relative; top: -40px; z-index: 1"
+    >WELCOME TO OUR DOG DATING APP!</p>
+
+  <img
+    src="https://th.bing.com/th/id/R.6c101d1e27bdad589f2224c771312bfa?rik=isoNyTjWLe3GCA&riu=http%3a%2f%2fweneedfun.com%2fwp-content%2fuploads%2f2015%2f10%2fCute-puppy-Pictures-29.jpg&ehk=c4Pri2hAYt5j%2b1ZUn%2bq04AcxiTD1gA6Nve6HmotswRE%3d&risl=&pid=ImgRaw&r=0"
+    class="img-fluid"
+    alt="puppy dog"
+    style="width: 50%; height:70%; float: left; opacity: 75%"
+  />
+  <img
+    src="https://hellobark.com/wp-content/uploads/rottweiler-image.jpg"
+    class="img-fluid"
+    alt="dog pic"
+    style="width: 50%; height:70%; opacity: 75%"
+  />
   </div>
 {{/if}}

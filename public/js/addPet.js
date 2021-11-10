@@ -89,7 +89,7 @@ const delFavorite = async (event) => {
 };
 const delPet = async (event) => {
   event.preventDefault();
-  console.log(event.target);
+  // console.log(event.target);
   if (event.target.hasAttribute("id")) {
     const id = event.target.getAttribute("id");
 
@@ -102,6 +102,11 @@ const delPet = async (event) => {
     }
   }
 };
+
+// const delPetEl = document.querySelector("#del-pet");
+// if (delPetEl) {
+//   delPetEl, addEventListener("click", delPet);
+// }
 
 document.querySelector("#add-pet").addEventListener("click", addPetFormHandler);
 document
