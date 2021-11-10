@@ -89,6 +89,7 @@ const delFavorite = async (event) => {
 };
 const delPet = async (event) => {
   event.preventDefault();
+  console.log(event.target);
   if (event.target.hasAttribute("id")) {
     const id = event.target.getAttribute("id");
 
