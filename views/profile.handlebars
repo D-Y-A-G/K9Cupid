@@ -14,13 +14,16 @@
     style="width: 18rem; position:relative; margin:40px; float:left;"
   >
     <img src="{{pet.image}}" class="card-img-top" alt="dog picture" />
-    <div class="card-body" style="text-align: center; align-items:center">
+    <div
+      class="card-body"
+      style="text-align: center; align-items:center font-size:1.5rem; font-family: 'Archivo Black', sans-serif;"
+    >
       <h2 class="card-title">{{pet.pet_name}}</h2>
-      <p class="card-text">🦴</p>
+      <p class="card-text" style="font-size: 3rem;">🦴</p>
     </div>
     <ul
       class="list-group list-group-flush"
-      style="text-align: center; align-items:center"
+      style="text-align: center; align-items:center; font-size:1.5rem; font-family: 'Archivo Black', sans-serif;"
     >
       <li class="list-group-item">Age {{pet.age}}</li>
       <li class="list-group-item">{{pet.breed}}</li>
@@ -28,12 +31,12 @@
       <li class="list-group-item">Doggie Size
         <span style="color: steelblue;">{{pet.size}}</span></li>
     </ul>
-    <button
+    {{!-- <button
       class="btn btn-danger"
       type="submit"
       data-id="{{pet.id}}"
       id="del-pet"
-    >Delete Pet</button>
+    >Delete Pet</button> --}}
 
   </div>
 

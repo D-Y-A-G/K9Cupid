@@ -14,7 +14,7 @@
       <h2 class="card-title">{{pet.pet_name}}</h2>
       <ul
         class="list-group list-group-flush"
-        style="text-align: center; align-items:center"
+        style="text-align: center; align-items:center; "
       >
         <li class="list-group-item">Age {{pet.age}}</li>
         <li class="list-group-item">{{pet.breed}}</li>
@@ -22,23 +22,9 @@
         <li class="list-group-item">Doggie Size
           <span style="color: steelblue;">{{pet.size}}</span></li>
       </ul>
-      <p class="card-text" style="font-size: 1rem; color:gray">Loves to go
-        hiking and dig for treasures</p>
+      {{! <p class="card-text" style="font-size: 1rem; color:gray">Loves to go
+        hiking and dig for treasures</p> }}
       <a href="/login" class="btn btn-primary">Go to profile</a>
     </div>
   </div>
 {{/each}}
-
-{{!-- <section class="container"></section>
-  {{#if logged_in}}
-  <section class="flex-row justify-center">
-    {{#each pet as |pet|}}
-    {{> pet-details}}
-    {{/each}}
-  </section>
-</section>
-<!--link to login -->
-{{else}}
-<a href="/login">You must login first to view this page</a>
-{{/if}}
-<script src="/js/addPet.js"></script> --}}
