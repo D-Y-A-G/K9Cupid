@@ -39,9 +39,10 @@ router.put("/:id", async (req, res) => {
 
 router.delete("/:id", withAuth, async (req, res) => {
   try {
+    console.log("got into try");
     const delPet = await Pet.destroy({
       where: {
-        id: req.body.id
+        id: req.params.id
       }
     });
     if (!delPet) {

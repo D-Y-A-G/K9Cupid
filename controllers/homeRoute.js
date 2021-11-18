@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Pet } = require("../models");
+const { sequelize } = require("../models/favorite");
 // const Pet = require("../models/pet");
 //const withAuth = require("../utils/auth");
 
@@ -32,6 +33,21 @@ router.get("/pets", async (req, res) => {
   }
 
   res.render("pets");
+});
+
+router.get("/edit/:id", async (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect("/login"); //profile
+    return;
+  }
+
+  const editPet = await Pet.findByPk(req.params.id);
+
+  if (editPet.owner_id === req.session.user_id) {
+    res.render("edit-pet");
+  } else {
+    res.redirect("/profile");
+  }
 });
 
 router.get("/register", async (req, res) => {

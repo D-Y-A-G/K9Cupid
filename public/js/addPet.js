@@ -89,17 +89,16 @@ const delFavorite = async (event) => {
 };
 const delPet = async (event) => {
   event.preventDefault();
-  // console.log(event.target);
-  if (event.target.hasAttribute("id")) {
-    const id = event.target.getAttribute("id");
+  console.log("deleting");
 
-    const response = await fetch(`/api/pets/${id}`, {
-      method: "DELETE"
-    });
+  const id = event.target.getAttribute("data-id");
 
-    if (response.ok) {
-      document.location.replace("/profile");
-    }
+  const response = await fetch(`/api/pets/${id}`, {
+    method: "DELETE"
+  });
+
+  if (response.ok) {
+    document.location.replace("/profile");
   }
 };
 
@@ -108,10 +107,34 @@ const delPet = async (event) => {
 //   delPetEl, addEventListener("click", delPet);
 // }
 
-document.querySelector("#add-pet").addEventListener("click", addPetFormHandler);
-document
-  .querySelector("#find-pet")
-  .addEventListener("click", findPetFormHandler);
-document.querySelector("#add-favorite").addEventListener("click", addFavorite);
-document.querySelector("#del-favorite").addEventListener("click", delFavorite);
-document.querySelector("#del-pet").addEventListener("click", delPet);
+const editPet = async (event) => {
+  event.preventDefault();
+  const id = event.target.getAttribute("data-id");
+  window.location.replace(`/edit/${id}`);
+};
+
+if (document.querySelector("#add-pet")) {
+  document
+    .querySelector("#add-pet")
+    .addEventListener("click", addPetFormHandler);
+
+  document
+    .querySelector("#find-pet")
+    .addEventListener("click", findPetFormHandler);
+  document
+    .querySelector("#add-favorite")
+    .addEventListener("click", addFavorite);
+  document
+    .querySelector("#del-favorite")
+    .addEventListener("click", delFavorite);
+}
+
+// document.querySelector(".del-pet").addEventListener("click", delPet);
+document.querySelector(".edit-pet").addEventListener("click", editPet);
+
+document.addEventListener("click", function (e) {
+  console.log(e.target.className);
+  if (e.target.classList.contains("del-pet")) {
+    delPet(e);
+  }
+});
