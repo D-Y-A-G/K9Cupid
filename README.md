@@ -99,7 +99,12 @@
   
   ## **🚧Tests**
   
+  [Test App in Heroku](https://k9-cupid-final.herokuapp.com/)
  
+ Application Images:
+ ![image](https://user-images.githubusercontent.com/84104912/141233747-9a3d420c-e44b-4577-bc82-383a1c4ce631.png)
+ ![image](https://user-images.githubusercontent.com/84104912/141233823-8e3cae7f-74e3-49a8-90b5-2ea63a4a6d30.png)
+
   ---
   
   ## **💬Questions**
@@ -108,7 +113,8 @@
   🥇For any questions please contact me on:
   ```
   
-  GitHub: **[dnsarce21 & Kiasiri](https://github.com/dnsarce21 & Kiasiri)**
+  GitHub: **[dnsarce21](https://github.com/dnsarce21)**
+  GitHub: **[Kiasiri](https://github.com/Kiasiri)**
   
   Email me: **dnsarce21@gmail.com**
  
