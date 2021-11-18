@@ -107,11 +107,11 @@ const delPet = async (event) => {
 //   delPetEl, addEventListener("click", delPet);
 // }
 
-const editPet = async (event) => {
-  event.preventDefault();
-  const id = event.target.getAttribute("data-id");
-  window.location.replace(`/edit/${id}`);
-};
+// const editPet = async (event) => {
+//   event.preventDefault();
+//   const id = event.target.getAttribute("data-id");
+//   window.location.replace(`/edit/${id}`);
+// };
 
 if (document.querySelector("#add-pet")) {
   document
@@ -130,7 +130,7 @@ if (document.querySelector("#add-pet")) {
 }
 
 // document.querySelector(".del-pet").addEventListener("click", delPet);
-document.querySelector(".edit-pet").addEventListener("click", editPet);
+// document.querySelector(".edit-pet").addEventListener("click", editPet);
 
 document.addEventListener("click", function (e) {
   console.log(e.target.className);
